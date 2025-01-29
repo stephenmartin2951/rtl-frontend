@@ -105,8 +105,9 @@ const AnalyticsComponent = ({ queryParams }: AnalyticProps) => {
 			if (metric === 'median') {
 				setActiveChartData(chartData.medianChartData || [])
 				setDataKey('trailing_median_rent')
-				setYAxisLabel(t('median-rent'))
-				setChartLabel(t('median-reported'))
+				setYAxisLabel(t('analytics.median-rent'))
+				setChartLabel(t('analytics.median-reported'))
+				console.log(chartData.medianChartData)
 				if (chartData?.medianChartData) {
 					setMaxY(
 						Math.max(
